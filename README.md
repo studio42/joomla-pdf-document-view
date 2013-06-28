@@ -1,5 +1,4 @@
-
-[DOWNLOAD IT](https://github.com/studio42/joomla-pdf-document-view/archive/master.zip)
+<a class="minibutton sidebar-button" href="https://github.com/studio42/joomla-pdf-document-view/archive/master.zip">DOWNLOAD IT</a>
 joomla-pdf-document-view
 ========================
 
