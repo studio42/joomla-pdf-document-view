@@ -1,3 +1,5 @@
+
+[DOWNLOAD IT](https://github.com/studio42/joomla-pdf-document-view/archive/master.zip)
 joomla-pdf-document-view
 ========================
 
