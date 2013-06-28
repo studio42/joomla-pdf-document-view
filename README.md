@@ -1,0 +1,24 @@
+joomla-pdf-document-view
+========================
+
+Joomla universal pdf render(dompdf, mpdf, tcpdf, wkhtmltopdf).
+
+The joomla library extention provide a solution to make PDF view & file.
+
+Four HTML to PDF converter are supported.
+
+wkhtmltopdf, is Great and fast but has a step more to install on linux or windows or mac.
+https://code.google.com/p/wkhtmltopdf/
+
+DomPdf give great result, but is a little slower 
+https://github.com/dompdf/dompdf
+
+Mpdf is a great chalenger.
+http://www.mpdf1.com/mpdf/index.php
+
+And the old pdf converter included in jommla 1.5, a little obselete now.
+http://www.tcpdf.org/
+
+With the library installed on joomla, you can display & save the rendered documents on file only with one instruction in your component.
+
+More details comming soon...
