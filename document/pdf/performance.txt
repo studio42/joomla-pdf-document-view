@@ -1,0 +1,27 @@
+Full time document render
+-------------------------
+89804 bytes
+Time Elapsed: 3.1796038150787s Engine : mpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+67840 bytes
+Time Elapsed: 3.7668688297272s Engine : tcpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+
+98493 bytes
+Time Elapsed: 4.726184129715s Engine : dompdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+
+76105 bytes
+Time Elapsed: 2.3424270153046s Engine : wkhtmltopdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+
+Final engine render
+-------------------
+
+89804 bytes
+Time Elapsed: 2.5918400287628s Engine : mpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+
+67840 bytes
+Time Elapsed: 3.1373960971832s Engine : tcpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+
+98493 bytes
+Time Elapsed: 4.1265690326691s Engine : dompdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
+
+76105 bytes
+Time Elapsed: 0.97784686088562s Engine : wkhtmltopdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf
