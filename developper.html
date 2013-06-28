@@ -46,14 +46,14 @@ your url is sef), no need to create a specific view, with the quality of some re
 <H1>Save PDF document to file</H1>
 <P>To save your pdf in your remote server, you have to change only
 one line in your component.</P>
-```$document->setDestination('F')&nbsp;;```
+<pre><code>$document->setDestination('F')&nbsp;;</code></pre>
 <P>if you have to change the directory or name, provide a full path
 link</P>
-```$document->setPath( JPATH_ROOT.'/media/mydocument.pdf/')&nbsp;;```
+<pre><code>`$document->setPath( JPATH_ROOT.'/media/mydocument.pdf/')&nbsp;;</code></pre>
 <P>but you can  write outside the JPATHROOT using a full valid path</P>
-```$document->setPath('D:\pdfs\mydocument.pdf')```
+<pre><code>$document->setPath('D:\pdfs\mydocument.pdf')</code></pre>
 <P>is valid in window</P>
-```$document->setPath('/home/myfolder/mydocument.pdf'```
+<pre><code>$document->setPath('/home/myfolder/mydocument.pdf'</code></pre>
 <P>is valid in linux if you have the right to write on this folders of course.</P>
 <P><A HREF="index.html">Return to home Page</A> 
 </P>
