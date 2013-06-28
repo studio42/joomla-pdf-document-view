@@ -1,0 +1,6 @@
+﻿
+#
+# Write a tag message
+# Lines starting with '#' will be ignored.
+#
+TCPDF package for joomla 2.5
