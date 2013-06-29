@@ -5,6 +5,7 @@ joomla-pdf-document-view
 Joomla universal pdf render(dompdf, mpdf, tcpdf, wkhtmltopdf).
 
 The joomla library extention provide a solution to make PDF view & file.
+User and developper info [HERE](http://studio42.github.io/joomla-pdf-document-view/index.html)
 
 Four HTML to PDF converter are supported.
 -----------------------------------
