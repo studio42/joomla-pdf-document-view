@@ -45,21 +45,46 @@
 
         <p><a href="https://github.com/studio42/joomla-pdf-document-view/archive/master.zip">DOWNLOAD IT</a></p>
 
-<h1>Display your PDF</h1>
-You can display pdf an adding &amp;format=pdf to the link.(or ?format=pdf in case of
-your url is sef), no need to create a specific view, with the quality of some render you get a nice PDF without changing your original page</P>
-<H1>Save PDF document to file</H1>
-<P>To save your pdf in your remote server, you have to change only
-one line in your component.</P>
-<pre><code>$document->setDestination('F')&nbsp;;</code></pre>
-<P>if you have to change the directory or name, provide a full path
-link</P>
-<pre><code>`$document->setPath( JPATH_ROOT.'/media/mydocument.pdf/')&nbsp;;</code></pre>
-<P>but you can  write outside the JPATHROOT using a full valid path</P>
-<pre><code>$document->setPath('D:\pdfs\mydocument.pdf')</code></pre>
-<P>is valid in window</P>
-<pre><code>$document->setPath('/home/myfolder/mydocument.pdf'</code></pre>
-<P>is valid in linux if you have the right to write on this folders of course.</P>
+<h1>Joomla installation</h1>
+<h3>Add support for PDF format in joomla</h3>
+<div>Installation steps
+<ul>
+	<li>Download the ZIP or TAR from the top menu</li>
+	<li>GO on your administrator Back-end</li>
+	<li>
+		Choice the menu 
+		<ul>
+			<li>Extension ></li
+			<li>Extension Manager</li
+		</ul>
+
+	</li>
+	<li>Select the file you have downloaded</li>
+	<li>Click now on <strong>update & install</strong></li>
+</ul>
+The main library is installed and joomla support now PDF.
+</div>
+<h3>Choice the library you prefer</h3>
+<div>Installation steps
+<ul>
+	<li>Download <strong>dompdf, mpdf, tcpdf or wkhtmltopdf</strong> from the top menu</li>
+	<li>GO on your administrator Back-end</li>
+	<li>
+		Choice the menu 
+		<ul>
+			<li>Extension ></li>
+			<li>Extension Manager</li
+		</ul>
+
+	</li>
+	<li>Select the file you have downloaded</li>
+	<li>Click now on <strong>update & install</strong></li>
+</ul>
+The PDF class library is installed and joomla support to render PDF with this library.
+YOu can remove it test another one and look witch is better for you
+
+</div>
+
 <P><A HREF="index.html">Return to home Page</A> 
 </P>
 <P>More details comming soon...</P>
