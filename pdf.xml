@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="document" method="upgrade">
+	<name>plg_document_pdf</name>
+	<author>Studio 42/P. Kohl</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) 2013 Studio42 France, All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>contact@st42.fr</authorEmail>
+	<authorUrl>www.st42.fr</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_PDF_XML_DESCRIPTION</description>
+	<files>
+		<folder>fields</folder>
+		<filename plugin="pdf">pdf.xml</filename>
+		<filename plugin="pdf">pdf.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_document_pdf.ini</language>
+		<language tag="en-GB">en-GB.plg_document_pdf.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+		<fieldset name="basic"
+			addfieldpath="/plugins/document/pdf/fields">
+			<field name="engine" type="engines" default=""
+				label="PLG_PDF_ENGINE_LABEL" description="PLG_PDF_ENGINE_DESC" />
+			<field name="headerspacer" type="spacer" label="PLG_PDF_HEADER_LABEL"/>
+			<field name="logo" type="media"
+				label="PLG_PDF_LOGO_LABEL" description="PLG_PDF_LOGO_DESC" />
+			<field name="logo_height" type="text" default="48"
+				label="PLG_PDF_LOGO_HEIGHT_LABEL" description="PLG_PDF_LOGO_HEIGHT_DESC" />
+			<field name="header_title" type="text" default=""
+				label="PLG_PDF_HEADER_TITLE_LABEL" description="PLG_PDF_HEADER_TITLE_DESC" />
+			<field name="margin_header" type="text" default="5"
+				label="PLG_PDF_MARGIN_HEADER_LABEL" description="PLG_PDF_MARGIN_HEADER_DESC" />
+
+			<field name="footerspacer" type="spacer" label="PLG_PDF_FOOTER_LABEL" />
+
+			<field name="footer_text" type="text" default=""
+				label="PLG_PDF_FOOTER_TEXT_LABEL" description="PLG_PDF_FOOTER_TEXT_DESC" />
+			<field	name="show_link" type="radio" default="1"
+				description="PLG_PDF_FOOTER_LINK_DESC"
+				label="PLG_PDF_FOOTER_LINK_LABEL"
+			>
+				<option
+					value="1">JYES</option>
+				<option
+					value="0">JNO</option>
+			</field>
+			<field name="margin_footer" type="text" default="5"
+				label="PLG_PDF_MARGIN_FOOTER_LABEL" description="PLG_PDF_MARGIN_FOOTER_DESC" />	
+
+			<field name="pagespacer" type="spacer" label="PLG_PDF_PAGE_LABEL" />
+
+			<field name="margin_left" type="text" default="5"
+				label="PLG_PDF_MARGIN_LEFT_LABEL" description="PLG_PDF_MARGIN_LEFT_DESC" />
+			<field name="margin_top" type="text" default="20"
+				label="PLG_PDF_MARGIN_TOP_LABEL" description="PLG_PDF_MARGIN_TOP_DESC" />
+			<field name="margin_right" type="text" default="5"
+				label="PLG_PDF_MARGIN_RIGHT_LABEL" description="PLG_PDF_MARGIN_RIGHT_DESC" />
+			<field name="margin_bottom" type="text" default="10"
+				label="PLG_PDF_MARGIN_BOTTOM_LABEL" description="PLG_PDF_MARGIN_BOTTOM_DESC" />
+			<field	name="orientation" type="radio" default="P"
+				description="PLG_PDF_ORIENTATION_DESC"
+				label="PLG_PDF_ORIENTATION_LABEL"
+			>
+				<option
+					value="P">PLG_PDF_ORIENTATION_OPTION_PORTRAIT</option>
+				<option
+					value="L">PLG_PDF_ORIENTATION_OPTION_LANDSCAPE</option>
+			</field>
+			<field	name="paper" type="list" default=""
+				label="PLG_PDF_PAPER_LABEL" description="PLG_PDF_PAPER_DESC"
+			>
+				<option value="A4">PLG_PDF_PAPER_OPTION_DEFAULT_A4</option>
+				<option value="A3">A3</option>
+				<option value="A5">A5</option>
+				<option value="A6">A6</option>
+				<option value="Legal">Legal</option>
+				<option value="letter">Letter</option>
+				<option value="B3">B3</option>
+				<option value="B4">B4</option>
+				<option value="B5">B5</option>
+			</field>
+			<field name="main_font" type="text" default=""
+				label="PLG_PDF_FONT_NAME_MAIN_LABEL" description="PLG_PDF_FONT_NAME_MAIN_DESC" />
+
+		</fieldset>
+		<fieldset name="wkhtmltopdf">
+			<field name="wkhtmltopdfinfo" type="spacer" label="PLG_PDF_WKHTMLTOPDF_INFO_LABEL" />
+			<field name="wkhtmltopdf_path" type="text" size="75" default="/usr/bin/wkhtmltopdf"
+				label="PLG_PDF_WKHTMLTOPDF_PATH_LABEL" description="PLG_PDF_WKHTMLTOPDF_PATH_DESC" />
+		</fieldset>
+		
+	</fields>
+	</config>
+</extension>
+
