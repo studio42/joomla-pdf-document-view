@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Joomla-pdf-document-view by studio42</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/studio42/joomla-pdf-document-view">View on GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/studio42/joomla-pdf-document-view/archive/lib_WkHtmlToPdf_j2.5.zip">WkHtmlToPdf</a></li>
+          <li class="downloads"><a href="https://github.com/studio42/joomla-pdf-document-view/archive/lib_tcpdf_j2.5.zip">TCPDF</a></li>
+          <li class="downloads"><a href="https://github.com/studio42/joomla-pdf-document-view/archive/lib_mpdf_j2.5.zip">mPDF</a></li>
+          <li class="downloads"><a href="https://github.com/studio42/joomla-pdf-document-view/archive/lib_dompdf_j2.5.zip">domPDF</a></li>
+          <li class="title">LIBRARIES</li>
+          <li class="downloads"><a href="https://github.com/studio42/joomla-pdf-document-view/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/studio42/joomla-pdf-document-view/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Joomla-pdf-document-view</h1>
+          <p>Joomla universal pdf render(dompdf, mpdf, tcpdf, wkhtmltopdf)</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/studio42">studio42</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p><a href="https://github.com/studio42/joomla-pdf-document-view/archive/master.zip">DOWNLOAD IT</a> - <a href="index.html">Return to home Page</a> </p>
+
+<h1>
+<a name="joomla-pdf-document-view" class="anchor" href="#joomla-pdf-document-view"><span class="octicon octicon-link"></span></a>joomla-pdf-document-view</h1>
+
+<p>Joomla universal pdf render(dompdf, mpdf, tcpdf, wkhtmltopdf).</p>
+
+<p>The joomla library extention provide a solution to make PDF view &amp; file.</p>
+
+<h2>
+<a name="four-html-to-pdf-converter-are-tested-joomla" class="anchor" href="#four-html-to-pdf-converter-are-tested-joomla"><span class="octicon octicon-link"></span></a>Four HTML to PDF converter tested in joomla 2.5.</h2>
+
+<h3>Full time document render</h3>
+<p>The first part include all document render time, this mean included Joomla, Virtuemart and the engine and give so to say the total waiting time for the user.</p>
+<p>
+File size : 89804 bytes<br/>
+Time Elapsed: 3.1796038150787s Engine : mpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+File size : 67840 bytes<br/>
+Time Elapsed: 3.7668688297272s Engine : tcpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+File size : 98493 bytes<br/>
+Time Elapsed: 4.726184129715s Engine : dompdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+File size : 76105 bytes<br/>
+Time Elapsed: 2.3424270153046s Engine : wkhtmltopdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+</p>
+<h3>Final engine render</h3>
+<p>This part include only the engine render and give the real time to create the PDF.I don't have removed all unneeded Css or image but it's a bit optimized</p>
+<p>
+File size : 89804 bytes<br/>
+Time Elapsed: 2.5918400287628s Engine : mpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+File size : 67840 bytes<br/>
+Time Elapsed: 3.1373960971832s Engine : tcpdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+File size : 98493 bytes<br/>
+Time Elapsed: 4.1265690326691s Engine : dompdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+File size : 76105 bytes<br/>
+Time Elapsed: 0.97784686088562s Engine : wkhtmltopdf D:\WEB\wamp\www\joomdemo/images/Apple iPad 4 Retina Display.pdf<br/>
+</p>
+<h3>Conclusion</h3>
+<p>
+<strong>tcpdf</strong> is actually not a good alternative. It's slow, the document is smallerbut do not includes background images, extra CSS and have a poor CSS compatibility(output is poor) <br/>
+<strong>mpdf</strong> Can do a good Result, but with some html/css optimisation, this mean on a complex template, tweaking your layout in case of PDF output. <br/>
+<strong>dompdf</strong> Have a better quality, but is the slowest, is a correct choice when you use it time to time. Especially if you cannot install wkhtmltopdf or want esay header and footer setup. <br/>
+<strong>wkhtmltopdf</strong> Simply the best, the fastest but have to be installed(if you can) on your linux server and not only as a PHP class. <br/>
+</p>
+<p><strong>Tested on</strong> Intel(R) Core(TM) i7 870/2.93GHz 4 cores, 4 Go Memory, Windows 7, Apache/2.2.17 (Win32), PHP 5.3.4
+</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
