@@ -66,7 +66,9 @@ link</P>
 One of easiest way , is of course hard coding the link in the view.<br/>
 but a nicer way is provided by the Joomla 2.5 CMS :</P>
 <h4>extending JHhtml</h4>
-Here a little code, to add in your template file
+<p>Here a little code, to add in your template.<br />
+File : /templates/MYTEMPLATE/helpers/pdf.php</p>
+
 <pre><code>class JHtmlPdf
 {
   static function article($article, $params, $attribs = array())
@@ -103,11 +105,11 @@ and how to add it in your view
 </code></pre>
 search
 <pre><code>
-  		<?php echo JHtml::_('icon.print_popup',  $this->item, $params); ?>
+ echo JHtml::_('icon.print_popup',  $this->item, $params);
 </code></pre>
 and replace with
 <pre><code>
-			<?php echo JHtml::_('pdf.article',  $this->item, $params); ?>
+ echo JHtml::_('pdf.article',  $this->item, $params);
 </code></pre>
 <p>A little explain,<br />
  JHTML <strong>pdf.article</strong> say to call class JHtmlPdf and the function article. and because we added the path to the helepr folder. Joomla know where the class is.</p>
