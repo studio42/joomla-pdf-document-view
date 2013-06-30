@@ -2,6 +2,7 @@
 /**
  * @package     Joomla.Platform
  * @subpackage  Form
+ * @plugin  pdf
  *
  * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
@@ -14,7 +15,13 @@ jimport('joomla.filesystem.file');
 JFormHelper::loadFieldClass('list');
 
 /**
- * Supports an HTML select list of files
+ * Supports an HTML select list of PDF engines from the know Joomla PDF library
+ * To add a new render engine, add the prosy render class in the document/pdf/renderer/pdfclassname.php
+ *  where pdfclassname is the main folder of the called class.
+ *  THis class can be an extend of the master class of the main library or a bridge if you prefer
+ *  The main library must be in the joomla libraies path :
+ *   JPATH_LIBRARIES.DS.pdfclassname
+ *  or you class is not recognized and can't be selected in this list.
  *
  * @package     Joomla.Platform
  * @subpackage  Form
