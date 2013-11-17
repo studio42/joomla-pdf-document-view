@@ -22,5 +22,6 @@ http://www.tcpdf.org/
 
 With the library installed on joomla, you can display & save the rendered documents on file only with one instruction in your component.
 [More details](http://studio42.github.io/joomla-pdf-document-view/index.html)
+
 Tested under joomla 2.5, but certainly work for joomla 3.0 and later
 
