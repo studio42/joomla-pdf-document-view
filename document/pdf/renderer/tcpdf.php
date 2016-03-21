@@ -10,10 +10,10 @@
 defined('JPATH_PLATFORM') or die;
 
 
-if(!file_exists(JPATH_LIBRARIES.DS.'tcpdf'.DS.'tcpdf.php')){
+if(!file_exists(JPATH_LIBRARIES.'/tcpdf/tcpdf.php')){
 	JError::raiseError(500, JText::sprintf('JLIB_APPLICATION_ERROR_APPLICATION_LOAD','TCPDF'));
 } else {
-	if(!class_exists('TCPDF'))	require(JPATH_LIBRARIES.DS.'tcpdf'.DS.'tcpdf.php');
+	if(!class_exists('TCPDF'))	require(JPATH_LIBRARIES.'/tcpdf/tcpdf.php');
 }
 /**
  * JDocumentRenderer_Atom is a feed that implements the atom specification

@@ -158,13 +158,13 @@ class JDocumentPDF extends JDocument
 
 		// verify and load the PDF class and assign by ref the jdocument
 		if ($type === null) $type = $this->params->get('engine','mpdf');
-		if(!file_exists(JPATH_LIBRARIES.DS.$type)) {
+		if(!file_exists(JPATH_LIBRARIES.'/'.$type)) {
 			// reset type & fallback to installed PDF classes
 			$type = null;
 			$renderers = JFolder::files(dirname(__FILE__) . '/renderer/' , '\.php$');
 			foreach ($renderers as $renderer) {
 				$lib = substr($renderer, 0, -4) ;
-				if (file_exists(JPATH_LIBRARIES.DS.$lib) ) {
+				if (file_exists(JPATH_LIBRARIES.'/'.$lib) ) {
 					$type = $lib ;
 					break;
 				}
@@ -179,13 +179,13 @@ class JDocumentPDF extends JDocument
 		// hock for missing PDF view in component
 		// set the type to HTML to fake component.
 		// Note : this can give bad result if you display a front view called from administrator and want use view.pdf.php
-		$viewPath = JPATH_ROOT.DS;
+		$viewPath = JPATH_ROOT.'/';
 		$input = JFactory::getApplication()->input;
 		$option = $input->get('option','','word');
 		$view = $input->get('view',substr($option, 4),'word');
 		$app = JFactory::getApplication();
-		if (!$app->isSite()) $viewPath .= 'administrator'.DS;
-		$viewPath .= 'components'.DS.$option .DS.'views'.DS.$view.DS.'view.pdf.php';
+		if (!$app->isSite()) $viewPath .= 'administrator/';
+		$viewPath .= 'components/'.$option .'/views/'.$view.'/view.pdf.php';
 		if(!file_exists($viewPath)) {
 			$input->set('format','html');
 			$this->_type = 'html';
@@ -275,7 +275,7 @@ class JDocumentPDF extends JDocument
 		if (empty($this->_pdfFilepath)) {
 			$params = JComponentHelper::getParams('com_media'); 
 			$path = $params->get('file_path','images');
-			$this->_pdfFilepath = JPATH_ROOT.DS.$path.DS.$this->getName().'.pdf';
+			$this->_pdfFilepath = JPATH_ROOT.'/'.$path.'/'.$this->getName().'.pdf';
 		}
 		return $this->_pdfFilepath ;
 	}
@@ -289,9 +289,12 @@ class JDocumentPDF extends JDocument
 	 */
 	function render( $cache = false, $params = array())
 	{
-		$pdf = &$this->_engine;
-		$config =& JFactory::getConfig();
-		$site = $config->getValue( 'config.sitename' );
+		$pdf = $this->_engine;
+		$config =JFactory::getConfig();
+	if(version_compare(JVERSION,'3.0.0','ge')) {
+		$site = $config->get( 'sitename' );
+	} else $site = $config->getValue( 'config.sitename' );
+		
 		$lang = JFactory::getLanguage();
 
 		// parse PDF document Metadata

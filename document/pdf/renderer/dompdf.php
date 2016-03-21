@@ -16,10 +16,10 @@ if (!defined('DOMPDF_FONT_CACHE'))
 	$config = JFactory::getConfig();
 	define('DOMPDF_FONT_CACHE', $config->get('tmp_path'));
 }
-if(!file_exists(JPATH_LIBRARIES.DS.'dompdf'.DS.'dompdf_config.inc.php')){
+if(!file_exists(JPATH_LIBRARIES.'/dompdf/dompdf_config.inc.php')){
 	JError::raiseError(500, JText::sprintf('JLIB_APPLICATION_ERROR_APPLICATION_LOAD','DOMPDF'));
 } else {
-	if(!class_exists('DOMPDF'))	require_once(JPATH_LIBRARIES.DS.'dompdf'.DS.'dompdf_config.inc.php');
+	if(!class_exists('DOMPDF'))	require_once(JPATH_LIBRARIES.'/dompdf/dompdf_config.inc.php');
 }
 
 /**
