@@ -9,7 +9,7 @@
 
 // Check to ensure this file is within the rest of the framework
 defined('JPATH_BASE') or die();
-
+JLoader::register('JFolder', JPATH_LIBRARIES . '/joomla/filesystem/folder.php');
 /**
  * DocumentPDF class, provides an easy interface to parse and display a pdf document
  * 
