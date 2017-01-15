@@ -16,10 +16,10 @@ JLoader::register('JFolder', JPATH_LIBRARIES . '/joomla/filesystem/folder.php');
  * Includes getter and setter function to simplify acces to mpdf
  * simply use syntax as in joomla get function models , but you can use 5 arguments!
  * eg.
-	// call to mpdf::SetMargins
-	$document = JFactory::getDocument();
-	$document->set('margins', 10,10,5);
-	
+ * 	// call to mpdf::SetMargins
+ *	$document = JFactory::getDocument();
+ *	$document->set('margins', 10,10,5);
+ *	
  *
  * @package		Joomla.Framework
  * @subpackage	Document
